@@ -3,157 +3,194 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Wao's Websites | @jswao</title>
+  <title>Wao's Services | @jswao</title>
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="TradeCore.png" />
+  <link rel="icon" type="image/png" href="TradeCore.png">
 
   <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
 
   <!-- Icons -->
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 
   <!-- CSS -->
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-  <div class="bg-glow"></div>
+<div class="bg-glow"></div>
 
-  <!-- NAV -->
-  <nav class="navbar container">
-    <a href="#" class="nav-logo">
-      <img src="TradeCore.png" alt="Trade Core" />
-      Wao's Websites
-    </div>
-    <a href="https://discord.gg/Sc8YdundhU" target="_blank" class="btn btn-primary">
-      <i class="ri-discord-fill"></i> Join Server
-    </a>
-  </nav>
+<!-- NAV -->
+<nav class="navbar container">
+  <a href="#" class="nav-logo">
+    <img src="TradeCore.png" alt="Trade Core">
+    Wao's Services
+  </a>
 
-  <!-- HERO -->
-  <header class="hero container">
-    <h1>
-      The Premire Destination for <br />
-      <span class="gradient-text">Elite Coders</span>
-    </h1>
-    <p>
-      Established a premium marketplace bringing together collectors, investors, and traders worldwide.
-    </p>
+  <a href="https://discord.gg/Sc8YdundhU" target="_blank" class="btn btn-primary">
+    <i class="ri-discord-fill"></i> Join Server
+  </a>
+</nav>
 
-    <!-- SERVER CARD -->
-    <div class="server-status-card" style="margin-top:40px;">
-      <img src="TradeCore.png" alt="Server Icon" />
-      <div class="server-info">
-        <h4>Wao Services</h4>
-        <div class="server-counts">
-          <div class="count-group">
-            <span class="status-dot online"></span>
-            <span>3 Online</span>
-          </div>
-          <div class="count-group">
-            <span class="status-dot offline"></span>
-            <span>6 Members</span>
-          </div>
+<!-- HERO -->
+<header class="hero container">
+  <h1>
+    The Premire Destination for <br>
+    <span class="gradient-text">Elite Coders</span>
+  </h1>
+  <p>
+    Established a premium marketplace bringing together collectors, investors, and traders worldwide.
+  </p>
+
+  <!-- LIVE SERVER CARD -->
+  <div id="server-card" class="server-status-card" style="margin-top:40px; display:none;">
+    <img id="server-icon" src="TradeCore.png" alt="Server Icon">
+    <div class="server-info">
+      <h4 id="server-name">Loading...</h4>
+      <div class="server-counts">
+        <div class="count-group">
+          <span class="status-dot online"></span>
+          <span id="online-count">-- Online</span>
+        </div>
+        <div class="count-group">
+          <span class="status-dot offline"></span>
+          <span id="member-count">-- Members</span>
         </div>
       </div>
-      <a href="https://discord.gg/Sc8YdundhU" target="_blank" class="btn-join">
-        Join
-      </a>
     </div>
-  </header>
+    <a id="server-invite" href="#" target="_blank" class="btn-join">Join</a>
+  </div>
+</header>
 
-  <!-- ABOUT -->
-  <section id="about" class="container">
-    <div class="grid-3">
-      <div class="card">
-        <div class="icon-box"><i class="ri-community-line"></i></div>
-        <h3>A Thriving Marketplace</h3>
-        <p>Premium trading hub powered by an active community.</p>
-      </div>
-      <div class="card">
-        <div class="icon-box"><i class="ri-shield-user-line"></i></div>
-        <h3>Safety & Security</h3>
-        <p>Verified members and professional middleman services.</p>
-      </div>
-      <div class="card">
-        <div class="icon-box"><i class="ri-flashlight-line"></i></div>
-        <h3>Active Community</h3>
-        <p>Events, giveaways, and daily discussions.</p>
-      </div>
+<!-- ABOUT -->
+<section id="about" class="container">
+  <div class="grid-3">
+    <div class="card">
+      <div class="icon-box"><i class="ri-community-line"></i></div>
+      <h3>A Thriving Marketplace</h3>
+      <p>Premium trading hub powered by an active community.</p>
     </div>
-  </section>
-
-  <!-- VERIFICATION -->
-  <section id="verification" class="verification-section">
-    <div class="container">
-      <div class="section-title">
-        <h2>Verify Our <span class="gradient-text">Identity</span></h2>
-        <p>Always verify the Server ID before trading.</p>
-      </div>
-
-      <div class="copy-box">
-        <span class="copy-text">1470184067776647284</span>
-        <button onclick="copyToClipboard('1470184067776647284')" class="copy-btn">
-          <i class="ri-file-copy-line"></i>
-        </button>
-      </div>
+    <div class="card">
+      <div class="icon-box"><i class="ri-shield-user-line"></i></div>
+      <h3>Safety & Security</h3>
+      <p>Verified members and professional middleman services.</p>
     </div>
-  </section>
+    <div class="card">
+      <div class="icon-box"><i class="ri-flashlight-line"></i></div>
+      <h3>Active Community</h3>
+      <p>Events, giveaways, and daily discussions.</p>
+    </div>
+  </div>
+</section>
 
-  <!-- TEAM -->
-  <section id="team" class="container">
+<!-- VERIFICATION -->
+<section id="verification" class="verification-section">
+  <div class="container">
     <div class="section-title">
-      <h2>Our <span class="gradient-text">Founder</span></h2>
-      <p>The main man behind Wao's Websites.</p>
+      <h2>Verify Our <span class="gradient-text">Identity</span></h2>
+      <p>Always check the Server ID before trading.</p>
     </div>
 
-    <div class="founders-grid" id="founders-container"></div>
-  </section>
+    <div class="copy-box">
+      <span class="copy-text">1470184067776647284</span>
+      <button onclick="copyToClipboard('1470184067776647284')" class="copy-btn">
+        <i class="ri-file-copy-line"></i>
+      </button>
+    </div>
+  </div>
+</section>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>
-      © 2026 Wao Websites<br />
-      Made with love by
-      <a href="https://discord.com/users/1445772766178447441" target="_blank">wao</a>
-    </p>
-  </footer>
+<!-- TEAM -->
+<section id="team" class="container">
+  <div class="section-title">
+    <h2>Our <span class="gradient-text">Founder</span></h2>
+    <p>The main man behind Wao's Websites.</p>
+  </div>
 
-  <!-- SCRIPT -->
-  <script>
-    function copyToClipboard(text) {
-      navigator.clipboard.writeText(text).then(() => alert("Copied!"));
+  <div class="founders-grid" id="founders-container"></div>
+</section>
+
+<!-- FOOTER -->
+<footer
+  style="
+    text-align:center;
+    padding:40px 24px;
+    color:var(--text-secondary);
+    border-top:1px solid var(--card-border);
+    background:rgba(255,255,255,0.02);
+  "
+>
+  <p style="font-size:0.9rem; line-height:1.6;">
+    © 2026 Wao Websites. All rights reserved.<br>
+    Made with love by
+    <a href="https://discord.com/users/1445772766178447441"
+       target="_blank"
+       rel="noopener noreferrer"
+       style="color:inherit; text-decoration:underline;">
+      wao
+    </a>.
+  </p>
+</footer>
+
+<!-- SCRIPT -->
+<script>
+const SERVER_ID = "1470184067776647284";
+
+function copyToClipboard(text) {
+  navigator.clipboard.writeText(text).then(() => alert("Copied!"));
+}
+
+// LIVE SERVER DATA (Discord Widget)
+async function loadServerStats() {
+  try {
+    const res = await fetch(
+      `https://discord.com/api/guilds/${SERVER_ID}/widget.json`
+    );
+    const data = await res.json();
+
+    document.getElementById("server-card").style.display = "flex";
+    document.getElementById("server-name").textContent = data.name;
+    document.getElementById("online-count").textContent =
+      data.presence_count.toLocaleString() + " Online";
+    document.getElementById("member-count").textContent =
+      data.members.length.toLocaleString() + " Members";
+    document.getElementById("server-invite").href = data.instant_invite;
+
+    if (data.icon) {
+      document.getElementById("server-icon").src =
+        `https://cdn.discordapp.com/icons/${SERVER_ID}/${data.icon}.png`;
     }
+  } catch (err) {
+    console.error("Failed to load server stats", err);
+  }
+}
 
-    function loadFounder() {
-      const container = document.getElementById("founders-container");
-
-      const founder = {
-        username: "jswao",
-        name: "wao",
-        id: "1445772766178447441",
-        avatar: "https://cdn.discordapp.com/attachments/1447239565206098091/1470220359671480370/TradeCore.png?ex=698a80e9&is=69892f69&hm=3bf7b3b9879b376b9455ba3eb98f61dd6f6afdbbddd91c93bbe9171defa9ce73&"
-      };
-
-      container.innerHTML = `
-        <div class="founder-card">
-          <div class="founder-content">
-            <div class="avatar-wrapper">
-              <div class="founder-avatar" style="background-image:url('${founder.avatar}')"></div>
-            </div>
-            <div class="founder-name">${founder.name}</div>
-            <div class="founder-id">@${founder.username}</div>
-            <div class="founder-id">${founder.id}</div>
+// FOUNDER
+function loadFounder() {
+  const container = document.getElementById("founders-container");
+  container.innerHTML = `
+    <div class="founder-card">
+      <div class="founder-content">
+        <div class="avatar-wrapper">
+          <div class="founder-avatar"
+               style="background-image:url('https://cdn.discordapp.com/attachments/1447239565206098091/1470220359671480370/TradeCore.png?ex=698a80e9&is=69892f69&hm=3bf7b3b9879b376b9455ba3eb98f61dd6f6afdbbddd91c93bbe9171defa9ce73&')">
           </div>
         </div>
-      `;
-    }
+        <div class="founder-name">Wao</div>
+        <div class="founder-id">@jswao</div>
+        <div class="founder-id">1445772766178447441</div>
+      </div>
+    </div>
+  `;
+}
 
-    window.addEventListener("DOMContentLoaded", loadFounder);
-  </script>
+window.addEventListener("DOMContentLoaded", () => {
+  loadServerStats();
+  loadFounder();
+});
+</script>
 </body>
-</html>
+  </html>
