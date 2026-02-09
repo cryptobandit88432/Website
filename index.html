@@ -1,387 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wao's Services</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wao's Websites | @jswao</title>
 
-<link rel="icon" href="TradeCore.png">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="TradeCore.png">
 
-<!-- Fonts -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
 
-<!-- Icons -->
-<link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  <!-- Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
 
-<style>
-/* ===============================
-   THEME
-================================ */
-:root {
-  --bg:#050505;
-  --card:#0b0b0f;
-  --border:rgba(255,255,255,.08);
-  --text:#fff;
-  --muted:#a1a1aa;
-}
-
-* { margin:0; padding:0; box-sizing:border-box; }
-
-body {
-  background:var(--bg);
-  color:var(--text);
-  font-family:Inter,sans-serif;
-}
-
-/* ===============================
-   LAYOUT
-================================ */
-.container {
-  max-width:1200px;
-  margin:auto;
-  padding:0 24px;
-}
-
-.bg-glow {
-  position:fixed;
-  inset:0;
-  z-index:-1;
-  pointer-events:none;
-}
-.bg-glow::before {
-  content:"";
-  position:absolute;
-  width:60%;
-  height:60%;
-  background:radial-gradient(circle,#fff 0%,transparent 60%);
-  opacity:.1;
-  filter:blur(120px);
-}
-
-/* ===============================
-   NAV
-================================ */
-.navbar {
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:24px 0;
-}
-
-.nav-logo {
-  display:flex;
-  align-items:center;
-  gap:12px;
-  font-weight:700;
-  font-size:1.2rem;
-  text-decoration:none;
-  color:white;
-}
-
-.nav-logo img {
-  height:40px;
-  border-radius:8px;
-}
-
-.nav-links {
-  display:flex;
-  gap:32px;
-}
-
-.nav-link {
-  color:var(--muted);
-  text-decoration:none;
-}
-
-.btn {
-  padding:12px 22px;
-  border-radius:10px;
-  font-weight:600;
-  text-decoration:none;
-}
-
-.btn-primary {
-  background:white;
-  color:black;
-}
-
-/* ===============================
-   HERO
-================================ */
-.hero {
-  min-height:80vh;
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-  align-items:center;
-  text-align:center;
-}
-
-.hero h1 {
-  font-family:Outfit,sans-serif;
-  font-size:4rem;
-  line-height:1.1;
-  margin-bottom:20px;
-}
-
-.hero p {
-  color:var(--muted);
-  max-width:600px;
-  margin-bottom:40px;
-}
-
-/* ===============================
-   SERVER CARD
-================================ */
-.server-status-card {
-  display:none;
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:16px;
-  padding:24px 28px;
-  display:flex;
-  align-items:center;
-  gap:20px;
-  max-width:520px;
-  width:100%;
-}
-
-.server-status-card img {
-  width:64px;
-  height:64px;
-  border-radius:18px;
-}
-
-.server-info {
-  flex:1;
-  text-align:left;
-}
-
-.server-info h4 {
-  font-size:1.2rem;
-  margin-bottom:6px;
-}
-
-.server-counts {
-  display:flex;
-  gap:16px;
-  font-size:.9rem;
-  color:var(--muted);
-}
-
-.status-dot {
-  width:9px;
-  height:9px;
-  border-radius:50%;
-  background:#22c55e;
-  display:inline-block;
-}
-
-.status-dot.offline {
-  background:#6b7280;
-}
-
-.btn-join {
-  background:white;
-  color:black;
-  padding:10px 20px;
-  border-radius:6px;
-  font-weight:600;
-}
-
-/* ===============================
-   SECTIONS
-================================ */
-section {
-  padding:80px 0;
-}
-
-.section-title {
-  text-align:center;
-  margin-bottom:60px;
-}
-
-.section-title h2 {
-  font-family:Outfit,sans-serif;
-  font-size:3rem;
-}
-
-.section-title p {
-  color:var(--muted);
-}
-
-/* ===============================
-   VERIFICATION
-================================ */
-.copy-box {
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:12px;
-  padding:16px 24px;
-  max-width:500px;
-  margin:20px auto;
-  display:flex;
-  justify-content:space-between;
-}
-
-.copy-text {
-  font-family:monospace;
-}
-
-/* ===============================
-   FOUNDERS
-================================ */
-.founders-grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:24px;
-}
-
-.founder-card {
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:16px;
-}
-
-.founder-content {
-  padding:28px 24px;
-}
-
-.founder-avatar {
-  width:80px;
-  height:80px;
-  border-radius:50%;
-  background-size:cover;
-  background-position:center;
-  margin-bottom:12px;
-}
-
-.founder-name {
-  font-weight:700;
-}
-
-.founder-id {
-  font-family:monospace;
-  font-size:.8rem;
-  color:var(--muted);
-}
-
-/* ===============================
-   FOOTER
-================================ */
-footer {
-  text-align:center;
-  padding:40px;
-  border-top:1px solid var(--border);
-  color:var(--muted);
-}
-
-footer a {
-  color:white;
-}
-</style>
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 <div class="bg-glow"></div>
 
+<!-- NAV -->
 <nav class="navbar container">
-  <a class="nav-logo" href="#">
-    <img src="TradeCore.png">
-    Wao's Services 
+  <a href="#" class="nav-logo">
+    <img src="TradeCore.png" alt="Trade Core">
+    Wao's Websites
   </a>
-  <a class="btn btn-primary" href="https://discord.gg/rbnZU3s59S" target="_blank">
-    Join Discord
+  <div class="nav-links">
+    <a href="#about" class="nav-link">About</a>
+    <a href="#verification" class="nav-link">Verification</a>
+    <a href="#team" class="nav-link">Team</a>
+  </div>
+  <a href="https://discord.gg/Sc8YdundhU" target="_blank" class="btn btn-primary">
+    <i class="ri-discord-fill"></i> Join Server
   </a>
 </nav>
 
+<!-- HERO -->
 <header class="hero container">
-  <h1>The Destination for Elite Coders</h1>
-  <p>Verified identities, live server stats, and a premium community.</p>
+  <h1>
+    The Premire Destination for <br>
+    <span class="gradient-text">Elite Coders</span>
+  </h1>
+  <p>
+    Established a premium marketplace bringing together collectors, investors, and traders worldwide.
+  </p>
 
-  <div id="server-status" class="server-status-card">
-    <img id="server-icon" src="TradeCore.png">
+  <!-- LIVE SERVER CARD -->
+  <div id="server-card" class="server-status-card" style="margin-top:40px; display:none;">
+    <img id="server-icon" src="TradeCore.png" alt="Server Icon">
     <div class="server-info">
-      <h4 id="server-name">Loading…</h4>
+      <h4 id="server-name">Loading...</h4>
       <div class="server-counts">
-        <span class="status-dot"></span>
-        <span id="online-count">—</span> Online
-        <span class="status-dot offline"></span>
-        <span id="member-count">—</span> Members
+        <div class="count-group">
+          <span class="status-dot online"></span>
+          <span id="online-count">-- Online</span>
+        </div>
+        <div class="count-group">
+          <span class="status-dot offline"></span>
+          <span id="member-count">-- Members</span>
+        </div>
       </div>
     </div>
-    <a class="btn-join" href="https://discord.gg/rbnZU3s59S" target="_blank">Join</a>
+    <a id="server-invite" href="#" target="_blank" class="btn-join">Join</a>
   </div>
 </header>
 
-<section id="verification" class="container">
-  <div class="section-title">
-    <h2>Verify Identity</h2>
-    <p>Always verify the official server ID.</p>
-  </div>
-
-  <div class="copy-box">
-    <span class="copy-text">1470184067776647284</span>
+<!-- ABOUT -->
+<section id="about" class="container">
+  <div class="grid-3">
+    <div class="card">
+      <div class="icon-box"><i class="ri-community-line"></i></div>
+      <h3>A Thriving Marketplace</h3>
+      <p>Premium trading hub powered by an active community.</p>
+    </div>
+    <div class="card">
+      <div class="icon-box"><i class="ri-shield-user-line"></i></div>
+      <h3>Safety & Security</h3>
+      <p>Verified members and professional middleman services.</p>
+    </div>
+    <div class="card">
+      <div class="icon-box"><i class="ri-flashlight-line"></i></div>
+      <h3>Active Community</h3>
+      <p>Events, giveaways, and daily discussions.</p>
+    </div>
   </div>
 </section>
 
+<!-- VERIFICATION -->
+<section id="verification" class="verification-section">
+  <div class="container">
+    <div class="section-title">
+      <h2>Verify Our <span class="gradient-text">Identity</span></h2>
+      <p>Always check the Server ID before trading.</p>
+    </div>
+
+    <div class="copy-box">
+      <span class="copy-text">1470184067776647284</span>
+      <button onclick="copyToClipboard('1470184067776647284')" class="copy-btn">
+        <i class="ri-file-copy-line"></i>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
 <section id="team" class="container">
   <div class="section-title">
-    <h2>Founder</h2>
-    <p>The mind behind Wao's Websites</p>
+    <h2>Our <span class="gradient-text">Founder</span></h2>
+    <p>The main man behind Wao's Websites.</p>
   </div>
 
-  <div class="founders-grid" id="founders"></div>
+  <div class="founders-grid" id="founders-container"></div>
 </section>
 
-<footer>
-  <p>
-    © 2026 Wao Websites<br>
+<!-- FOOTER -->
+<footer
+  style="
+    text-align:center;
+    padding:40px 24px;
+    color:var(--text-secondary);
+    border-top:1px solid var(--card-border);
+    background:rgba(255,255,255,0.02);
+  "
+>
+  <p style="font-size:0.9rem; line-height:1.6;">
+    © 2026 Wao Websites. All rights reserved.<br>
     Made with love by
-    <a href="https://discord.com/users/1445772766178447441" target="_blank">wao</a>
+    <a href="https://discord.com/users/1445772766178447441"
+       target="_blank"
+       rel="noopener noreferrer"
+       style="color:inherit; text-decoration:underline;">
+      wao
+    </a>.
   </p>
 </footer>
 
+<!-- SCRIPT -->
 <script>
-async function init() {
+const SERVER_ID = "1470184067776647284";
+
+function copyToClipboard(text) {
+  navigator.clipboard.writeText(text).then(() => alert("Copied!"));
+}
+
+// LIVE SERVER DATA (Discord Widget)
+async function loadServerStats() {
   try {
-    const res = await fetch('/api/data');
+    const res = await fetch(
+      `https://discord.com/api/guilds/${SERVER_ID}/widget.json`
+    );
     const data = await res.json();
 
-    if (data.guild) {
-      document.getElementById('server-status').style.display = 'flex';
-      document.getElementById('server-name').textContent = data.guild.name;
-      document.getElementById('online-count').textContent = data.guild.online;
-      document.getElementById('member-count').textContent = data.guild.members;
-      if (data.guild.icon) {
-        document.getElementById('server-icon').src = data.guild.icon;
-      }
-    }
+    document.getElementById("server-card").style.display = "flex";
+    document.getElementById("server-name").textContent = data.name;
+    document.getElementById("online-count").textContent =
+      data.presence_count.toLocaleString() + " Online";
+    document.getElementById("member-count").textContent =
+      data.members.length.toLocaleString() + " Members";
+    document.getElementById("server-invite").href = data.instant_invite;
 
-    if (data.founders) {
-      const wrap = document.getElementById('founders');
-      data.founders.forEach(f => {
-        const card = document.createElement('div');
-        card.className = 'founder-card';
-        card.innerHTML = `
-          <div class="founder-content">
-            <div class="founder-avatar" style="background-image:url('${f.avatar_url}')"></div>
-            <div class="founder-name">${f.global_name || f.username}</div>
-            <div class="founder-id">@${f.username}</div>
-            <div class="founder-id">${f.id}</div>
-          </div>`;
-        wrap.appendChild(card);
-      });
+    if (data.icon) {
+      document.getElementById("server-icon").src =
+        `https://cdn.discordapp.com/icons/${SERVER_ID}/${data.icon}.png`;
     }
-  } catch (e) {
-    console.error(e);
+  } catch (err) {
+    console.error("Failed to load server stats", err);
   }
 }
 
-init();
-</script>
+// FOUNDER
+function loadFounder() {
+  const container = document.getElementById("founders-container");
+  container.innerHTML = `
+    <div class="founder-card">
+      <div class="founder-content">
+        <div class="avatar-wrapper">
+          <div class="founder-avatar"
+               style="background-image:url('https://cdn.discordapp.com/embed/avatars/0.png')">
+          </div>
+        </div>
+        <div class="founder-name">Wao</div>
+        <div class="founder-id">@wao</div>
+        <div class="founder-id">1445772766178447441</div>
+      </div>
+    </div>
+  `;
+}
 
+window.addEventListener("DOMContentLoaded", () => {
+  loadServerStats();
+  loadFounder();
+});
+</script>
 </body>
 </html>
