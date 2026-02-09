@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wao's Websites | @jswao</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="TradeCore.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="bg-glow"></div>
+
+  <!-- NAV -->
+  <nav class="navbar container">
+    <a href="#" class="nav-logo">
+      <img src="TradeCore.png" alt="Trade Core" />
+      Wao's Websites
+    </a>
+    <div class="nav-links">
+      <a href="#about" class="nav-link">About</a>
+      <a href="#verification" class="nav-link">Verification</a>
+      <a href="#team" class="nav-link">Team</a>
+    </div>
+    <a href="https://discord.gg/Sc8YdundhU" target="_blank" class="btn btn-primary">
+      <i class="ri-discord-fill"></i> Join Server
+    </a>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero container">
+    <h1>
+      The Premire Destination for <br />
+      <span class="gradient-text">Elite Coders</span>
+    </h1>
+    <p>
+      Established a premium marketplace bringing together collectors, investors, and traders worldwide.
+    </p>
+
+    <!-- SERVER CARD -->
+    <div class="server-status-card" style="margin-top:40px;">
+      <img src="TradeCore.png" alt="Server Icon" />
+      <div class="server-info">
+        <h4>Wao Services</h4>
+        <div class="server-counts">
+          <div class="count-group">
+            <span class="status-dot online"></span>
+            <span>3 Online</span>
+          </div>
+          <div class="count-group">
+            <span class="status-dot offline"></span>
+            <span>6 Members</span>
+          </div>
+        </div>
+      </div>
+      <a href="https://discord.gg/Sc8YdundhU" target="_blank" class="btn-join">
+        Join
+      </a>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about" class="container">
+    <div class="grid-3">
+      <div class="card">
+        <div class="icon-box"><i class="ri-community-line"></i></div>
+        <h3>A Thriving Marketplace</h3>
+        <p>Premium trading hub powered by an active community.</p>
+      </div>
+      <div class="card">
+        <div class="icon-box"><i class="ri-shield-user-line"></i></div>
+        <h3>Safety & Security</h3>
+        <p>Verified members and professional middleman services.</p>
+      </div>
+      <div class="card">
+        <div class="icon-box"><i class="ri-flashlight-line"></i></div>
+        <h3>Active Community</h3>
+        <p>Events, giveaways, and daily discussions.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- VERIFICATION -->
+  <section id="verification" class="verification-section">
+    <div class="container">
+      <div class="section-title">
+        <h2>Verify Our <span class="gradient-text">Identity</span></h2>
+        <p>Always verify the Server ID before trading.</p>
+      </div>
+
+      <div class="copy-box">
+        <span class="copy-text">1470184067776647284</span>
+        <button onclick="copyToClipboard('1470184067776647284')" class="copy-btn">
+          <i class="ri-file-copy-line"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section id="team" class="container">
+    <div class="section-title">
+      <h2>Our <span class="gradient-text">Founder</span></h2>
+      <p>The main man behind Wao's Websites.</p>
+    </div>
+
+    <div class="founders-grid" id="founders-container"></div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>
+      © 2026 Wao Websites<br />
+      Made with love by
+      <a href="https://discord.com/users/1445772766178447441" target="_blank">wao</a>
+    </p>
+  </footer>
+
+  <!-- SCRIPT -->
+  <script>
+    function copyToClipboard(text) {
+      navigator.clipboard.writeText(text).then(() => alert("Copied!"));
+    }
+
+    function loadFounder() {
+      const container = document.getElementById("founders-container");
+
+      const founder = {
+        username: "jswao",
+        name: "wao",
+        id: "1445772766178447441",
+        avatar: "https://cdn.discordapp.com/attachments/1447239565206098091/1470220359671480370/TradeCore.png?ex=698a80e9&is=69892f69&hm=3bf7b3b9879b376b9455ba3eb98f61dd6f6afdbbddd91c93bbe9171defa9ce73&"
+      };
+
+      container.innerHTML = `
+        <div class="founder-card">
+          <div class="founder-content">
+            <div class="avatar-wrapper">
+              <div class="founder-avatar" style="background-image:url('${founder.avatar}')"></div>
+            </div>
+            <div class="founder-name">${founder.name}</div>
+            <div class="founder-id">@${founder.username}</div>
+            <div class="founder-id">${founder.id}</div>
+          </div>
+        </div>
+      `;
+    }
+
+    window.addEventListener("DOMContentLoaded", loadFounder);
+  </script>
+</body>
+</html>
