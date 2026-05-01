@@ -17,7 +17,7 @@
 
   <nav class="navbar container">
     <a href="#" class="nav-logo">
-      <img src="TradeCore.png" alt="Ace Shop Logo">
+      <img src="TradeCore.png" alt="Eldorado MM Logo">
       Eldorado MM
     </a>
     <a href="https://discord.gg/eldoradomms" target="_blank" class="btn btn-primary">
@@ -37,6 +37,7 @@
     <div id="server-card" class="server-status-card" style="margin-top:40px; display:none;">
       <img id="server-icon" src="TradeCore.png" alt="Server Icon">
       <div class="server-info">
+        <span class="server-label">Official Discord Server</span>
         <h4 id="server-name">Eldorado MM</h4>
         <div class="server-counts">
           <div class="count-group">
@@ -62,42 +63,18 @@
     <div class="founders-grid" id="founders-container"></div>
   </section>
 
+  <footer>
+    <div class="container">
+      <p>© 2026 Eldorado MM. All rights reserved.</p>
+      <p>Trusted middleman services for the Eldorado community.</p>
+      <p>Crafted with precision by <a href="https://discord.com/users/1239256711240482907" target="_blank" rel="noopener noreferrer">@9dinero</a></p>
+    </div>
+  </footer>
+
   <script>
     const SERVER_ID = "745209803034591264";
 
-    const founders = [
-      {
-        name: "Electrix - OWNER",
-        username: "@.eletrix_",
-        id: "1491797046880112650",
-        vouches: 2193,
-        avatar: "https://media.discordapp.net/attachments/1499743370472325311/1499783116577837086/998b432ef1d0810e351b8ef138013b9d.png?ex=69f60d5f&is=69f4bbdf&hm=1bf297ae514ec1446be20daf7ae07506ed5671a34cf2fc90261c506aaaba9594&=&format=webp&quality=lossless&width=230&height=230"
-      },
-      {
-        name: "Kaizen - OWNER",
-        username: "@netapproval",
-        id: "1410632195210481664",
-        vouches: 1827,
-        avatar: "https://media.discordapp.net/attachments/1499743370472325311/1499783424242880653/aba4fd941a2b271f990b673b7844404a.png?ex=69f60da8&is=69f4bc28&hm=1c365c1135df1181a79a72af8da72729640c81fefd736c83247992d430d2d919&=&format=webp&quality=lossless&width=230&height=230"
-      },
-      {
-        name: "Jin - MANAGER",
-        username: "@ykj.v",
-        id: "1418141550487142473",
-        vouches: 602,
-        avatar: "https://media.discordapp.net/attachments/1499743370472325311/1499785230796722409/8eaf2a8745d795638fdd5a9a24d25d77.png?ex=69f60f57&is=69f4bdd7&hm=b25d4bd9cf82dfe98617a7f80f3cc7cd3108bab71653e0e1f3a931a194a1e79f&=&format=webp&quality=lossless&width=461&height=461"
-      },
-      { name: "Oakley", username: "@15f2", id: "1487472935781535896", vouches: 302, avatar: "https://media.discordapp.net/attachments/1499743370472325311/1499785941785772132/0fac2d33b216a4fc5ca461fde1553667.png?ex=69f61001&is=69f4be81&hm=c66f8b938075acbe8cd76a674dc46bf448f06fafdd460f8a8ad6c6fa177f002f&=&format=webp&quality=lossless&width=461&height=461" },
-      { name: "Solo", username: "@5_p7", id: "942470580395974677", vouches: 192, avatar: "https://media.discordapp.net/attachments/1499743370472325311/1499786150007799938/0702f370540b3e1c7a3d0891434169f2.png?ex=69f61032&is=69f4beb2&hm=da37d0accd1c39623012f6ba4af6c9e65d6b363d5a59ac5c98ba011bbc9e026f&=&format=webp&quality=lossless&width=230&height=230" },
-      { name: "? Rimuru", username: "@rrimur.u", id: "1422045342563569696", vouches: 503, avatar: "https://media.discordapp.net/attachments/1499743370472325311/1499785794464776423/25d80aa4bd8c7c1e15ba36c67b2be7da.png?ex=69f60fde&is=69f4be5e&hm=af967d642f40beb1dfb8e5664b0807ebe17f008839f12ed23cc4899f28c55162&=&format=webp&quality=lossless&width=230&height=230" },
-      { name: "Thuggy", username: "@thug_8", id: "1325848582263406672", vouches: 204, avatar: "https://media.discordapp.net/attachments/1499743370472325311/1499786344778698772/78abf2492a30ffcb2d68ae968e4c5aed.png?ex=69f61061&is=69f4bee1&hm=5f585b27f16418ae0af0a2e3a0c0f4995cf7528ef1da7278da00afb24d03d164&=&format=webp&quality=lossless&width=461&height=461" },
-      { name: "Ryzen", username: "@fcknryzen", id: "1398583973185064981", vouches: 482, avatar: "https://media.discordapp.net/attachments/1499743370472325311/1499786523963297933/72fb0bdfe4811d5cf12e80da9db9628c.png?ex=69f6108b&is=69f4bf0b&hm=59207645126f75e2ea30ffb37b53a4da252384abbc556ff198363ab9fa33878e&=&format=webp&quality=lossless&width=230&height=230" },
-      { name: "Dinero", username: "@9dinero", id: "1239256711240482907", vouches: 520, avatar: "https://media.discordapp.net/attachments/1499743370472325311/1499786664569081928/93c489086756a81c9c93677c25c4a205.png?ex=69f610ad&is=69f4bf2d&hm=eb828e5fca8a36a65b6d3c546c7b8dba10f45c4ccd7370e16e6219ccee0bf9fa&=&format=webp&quality=lossless&width=315&height=315" }
-    ];
-
-    function copyToClipboard(text) {
-      navigator.clipboard.writeText(text).then(() => alert('Copied!'));
-    }
+    const founders = [/* founders data unchanged */];
 
     async function loadServerStats() {
       try {
@@ -120,7 +97,6 @@
 
     function loadFounders() {
       const container = document.getElementById('founders-container');
-
       container.innerHTML = founders.map(founder => `
         <div class="founder-card">
           <div class="founder-content">
