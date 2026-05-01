@@ -161,6 +161,20 @@ h1, h2, h3, h4 {
 
 .btn-primary:hover,
 .btn-join:hover,
+#server-invite,
+#server-invite:visited {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f6c453 0%, #e3a81d 100%);
+  color: #1b1405;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  box-shadow: 0 10px 25px rgba(246, 196, 83, 0.25);
+}
+
 #server-invite:hover {
   transform: translateY(-2px);
   box-shadow: 0 14px 35px rgba(246, 196, 83, 0.35);
