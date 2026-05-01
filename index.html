@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Ace Shop | @9dinero </title>
+  <title>Eldorado MM</title>
 
   <link rel="icon" type="image/png" href="TradeCore.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,169 +13,143 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="bg-glow"></div>
+  <div class="bg-glow"></div>
 
-<nav class="navbar container">
-  <a href="#" class="nav-logo">
-    <img src="TradeCore.png" alt="Trade Core">
-    Ace Shop 
-  </a>
-  <a href="https://discord.gg/acebetter" target="_blank" class="btn btn-primary">
-    <i class="ri-discord-fill"></i> Join Server
-  </a>
-</nav>
+  <nav class="navbar container">
+    <a href="#" class="nav-logo">
+      <img src="TradeCore.png" alt="Ace Shop Logo">
+      Eldorado MM
+    </a>
+    <a href="https://discord.gg/eldoradomms" target="_blank" class="btn btn-primary">
+      <i class="ri-discord-fill"></i> Join Server
+    </a>
+  </nav>
 
-<header class="hero container">
-  <h1>
-    The Premire Destination for <br>
-    <span class="gradient-text">The Best Services</span>
-  </h1>
-  <p>
-    Established a premium marketplace bringing together collectors, investors, and traders worldwide.
-  </p>
+  <header class="hero container">
+    <h1>
+      The Premier Destination for <br>
+      <span class="gradient-text">Eldorado's Middleman</span>
+    </h1>
+    <p>
+      A premium marketplace connecting collectors, investors, and traders worldwide.
+    </p>
 
-  <div id="server-card" class="server-status-card" style="margin-top:40px; display:none;">
-    <img id="server-icon" src="TradeCore.png" alt="Server Icon">
-    <div class="server-info">
-      <h4 id="server-name">Ace Shop</h4>
-      <div class="server-counts">
-        <div class="count-group">
-          <span class="status-dot online"></span>
-          <span id="online-count">16 Online</span>
-        </div>
-        <div class="count-group">
-          <span class="status-dot offline"></span>
-          <span id="member-count">98 Members</span>
+    <div id="server-card" class="server-status-card" style="margin-top:40px; display:none;">
+      <img id="server-icon" src="TradeCore.png" alt="Server Icon">
+      <div class="server-info">
+        <h4 id="server-name">Eldorado MM</h4>
+        <div class="server-counts">
+          <div class="count-group">
+            <span class="status-dot online"></span>
+            <span id="online-count">8,230 Online</span>
+          </div>
+          <div class="count-group">
+            <span class="status-dot offline"></span>
+            <span id="member-count">107,332 Members</span>
+          </div>
         </div>
       </div>
+      <a id="server-invite" href="#" target="_blank" class="btn-join">Join</a>
     </div>
-    <a id="server-invite" href="https://discord.gg/RypAdqcwNa" target="_blank" class="btn-join">Join</a>
-  </div>
-</header>
+  </header>
 
-<section id="about" class="container">
-  <div class="grid-3">
-    <div class="card">
-      <div class="icon-box"><i class="ri-community-line"></i></div>
-      <h3>A Thriving Marketplace</h3>
-      <p>Premium trading hub powered by an active community.</p>
-    </div>
-    <div class="card">
-      <div class="icon-box"><i class="ri-shield-user-line"></i></div>
-      <h3>Safety & Security</h3>
-      <p>Verified members and professional services.</p>
-    </div>
-    <div class="card">
-      <div class="icon-box"><i class="ri-flashlight-line"></i></div>
-      <h3>Active Community</h3>
-      <p>Events, giveaways, and daily discussions.</p>
-    </div>
-  </div>
-</section>
-
-<section id="verification" class="verification-section">
-  <div class="container">
+  <section id="team" class="container">
     <div class="section-title">
-      <h2>Verify Our <span class="gradient-text">Identity</span></h2>
-      <p>Always check the Server ID before trading.</p>
+      <h2>Our <span class="gradient-text">Leadership Team</span></h2>
+      <p>The MAIN people behind Eldorado's Middleman Services</p>
     </div>
 
-    <div class="copy-box">
-      <span class="copy-text">1469094312259358827</span>
-      <button onclick="copyToClipboard('1469094312259358827')" class="copy-btn">
-        <i class="ri-file-copy-line"></i>
-      </button>
-    </div>
-  </div>
-</section>
+    <div class="founders-grid" id="founders-container"></div>
+  </section>
 
-<section id="team" class="container">
-  <div class="section-title">
-    <h2>Our <span class="gradient-text">Founder</span></h2>
-    <p>The main men behind Ace Shop</p>
-  </div>
+  <footer>
+    <p>
+      © 2026 Ace Shop. All rights reserved.<br>
+      Made with love by <a href="https://discord.com/users/1239256711240482907" target="_blank">dinero</a>.
+    </p>
+  </footer>
 
-  <div class="founders-grid" id="founders-container"></div>
-</section>
+  <script>
+    const SERVER_ID = "745209803034591264";
 
-<footer style="text-align:center; padding:40px 24px; color:var(--text-secondary); border-top:1px solid var(--card-border); background:rgba(255,255,255,0.02);">
-  <p style="font-size:0.9rem; line-height:1.6;">
-    © 2026 Ace Shop All rights reserved.<br>
-    Made with love by
-    <a href="https://discord.com/users/1239256711240482907" target="_blank" rel="noopener noreferrer" style="color:inherit; text-decoration:underline;">
-      dinero
-    </a>.
-  </p>
-</footer>
+    const founders = [
+      {
+        name: "Electrix",
+        username: "@.eletrix_",
+        id: "1491797046880112650",
+        vouches: 2193,
+        avatar: "https://media.discordapp.net/attachments/1499743370472325311/1499783116577837086/998b432ef1d0810e351b8ef138013b9d.png?ex=69f60d5f&is=69f4bbdf&hm=1bf297ae514ec1446be20daf7ae07506ed5671a34cf2fc90261c506aaaba9594&=&format=webp&quality=lossless&width=230&height=230"
+      },
+      {
+        name: "Kaizen",
+        username: "@netapproval",
+        id: "1410632195210481664",
+        vouches: 1827,
+        avatar: "https://media.discordapp.net/attachments/1499743370472325311/1499783424242880653/aba4fd941a2b271f990b673b7844404a.png?ex=69f60da8&is=69f4bc28&hm=1c365c1135df1181a79a72af8da72729640c81fefd736c83247992d430d2d919&=&format=webp&quality=lossless&width=230&height=230"
+      },
+      {
+        name: "Jin",
+        username: "@ykj.v",
+        id: "1418141550487142473",
+        vouches: 602,
+        avatar: "https://media.discordapp.net/attachments/1499743370472325311/1499785230796722409/8eaf2a8745d795638fdd5a9a24d25d77.png?ex=69f60f57&is=69f4bdd7&hm=b25d4bd9cf82dfe98617a7f80f3cc7cd3108bab71653e0e1f3a931a194a1e79f&=&format=webp&quality=lossless&width=461&height=461"
+      },
+      { name: "Oakley", username: "@15f2", id: "1487472935781535896", vouches: 302, avatar: "TradeCore.png" },
+      { name: "Solo", username: "@5_p7", id: "942470580395974677", vouches: 192, avatar: "TradeCore.png" },
+      { name: "? Rimuru", username: "@rrimur.u", id: "1422045342563569696", vouches: 503, avatar: "TradeCore.png" },
+      { name: "Thuggy", username: "@thug_8", id: "1325848582263406672", vouches: 204, avatar: "TradeCore.png" },
+      { name: "Ryzen", username: "@fcknryzen", id: "1398583973185064981", vouches: 482, avatar: "TradeCore.png" },
+      { name: "Dinero", username: "@9dinero", id: "1239256711240482907", vouches: 520, avatar: "TradeCore.png" }
+    ];
 
-<script>
-const SERVER_ID = "1469094312259358827";
-
-function copyToClipboard(text) {
-  navigator.clipboard.writeText(text).then(() => alert("Copied!"));
-}
-
-async function loadServerStats() {
-  try {
-    const res = await fetch(`https://discord.com/api/guilds/${SERVER_ID}/widget.json`);
-    const data = await res.json();
-
-    document.getElementById("server-card").style.display = "flex";
-    document.getElementById("server-name").textContent = data.name;
-    document.getElementById("online-count").textContent = data.presence_count.toLocaleString() + " Online";
-    document.getElementById("member-count").textContent = data.members.length.toLocaleString() + " Members";
-    document.getElementById("server-invite").href = data.instant_invite;
-
-    if (data.icon) {
-      document.getElementById("server-icon").src = `https://cdn.discordapp.com/icons/${SERVER_ID}/${data.icon}.png`;
+    function copyToClipboard(text) {
+      navigator.clipboard.writeText(text).then(() => alert('Copied!'));
     }
-  } catch (err) {
-    console.error("Failed to load server stats", err);
-  }
-}
 
-function loadFounder() {
-  const container = document.getElementById("founders-container");
-  container.innerHTML = `
-    <div class="founder-card">
-      <div class="founder-content">
-        <div class="avatar-wrapper">
-          <div class="founder-avatar" style="background-image:url('https://media.discordapp.net/attachments/1499678798692745256/1499687965608382515/9f9b12b8599e776889b0923a85a49689.png?ex=69f5b4c1&is=69f46341&hm=ef7d5499bc39ff8c1522783b6b1c335270fe5d3c7cf50cdbc0ca3015c5cb9aba&=&format=webp&quality=lossless&width=230&height=230')"></div>
+    async function loadServerStats() {
+      try {
+        const res = await fetch(`https://discord.com/api/guilds/${SERVER_ID}/widget.json`);
+        const data = await res.json();
+
+        document.getElementById('server-card').style.display = 'flex';
+        document.getElementById('server-name').textContent = data.name;
+        document.getElementById('online-count').textContent = `${data.presence_count.toLocaleString()} Online`;
+        document.getElementById('member-count').textContent = `${data.members.length.toLocaleString()} Members`;
+        document.getElementById('server-invite').href = data.instant_invite;
+
+        if (data.icon) {
+          document.getElementById('server-icon').src = `https://cdn.discordapp.com/icons/${SERVER_ID}/${data.icon}.png`;
+        }
+      } catch (err) {
+        console.error('Failed to load server stats', err);
+      }
+    }
+
+    function loadFounders() {
+      const container = document.getElementById('founders-container');
+
+      container.innerHTML = founders.map(founder => `
+        <div class="founder-card">
+          <div class="founder-content">
+            <div class="avatar-wrapper">
+              <div class="founder-avatar" style="background-image:url('${founder.avatar}')"></div>
+            </div>
+            <div class="founder-name">${founder.name}</div>
+            <div class="founder-id">${founder.username}</div>
+            <div class="founder-id">ID: ${founder.id}</div>
+            <div class="vouches-badge">
+              <i class="ri-shield-check-fill"></i>
+              ${founder.vouches} Vouches
+            </div>
+          </div>
         </div>
-        <div class="founder-name">aceofsix</div>
-        <div class="founder-id">@aceofsixisback</div>
-        <div class="founder-id">1172910542902538262</div>
-      </div>
-    </div>
+      `).join('');
+    }
 
-    <div class="founder-card">
-      <div class="founder-content">
-        <div class="avatar-wrapper">
-          <div class="founder-avatar" style="background-image:url('https://media.discordapp.net/attachments/1499678798692745256/1499689840013348985/e9a4e380e63cef727bb89d28dd94d7a6.png?ex=69f5b680&is=69f46500&hm=c8f1058a8149ec2d0ae11fa568c6fcfcfaba381852dbe6128c149f632d0122df&=&format=webp&quality=lossless&width=461&height=461')"></div>
-        </div>
-        <div class="founder-name">Toxic</div>
-        <div class="founder-id">@toxicfuckingc</div>
-        <div class="founder-id">1425483231763107873</div>
-      </div>
-    </div>
-
-    <div class="founder-card">
-      <div class="founder-content">
-        <div class="avatar-wrapper">
-          <div class="founder-avatar" style="background-image:url('https://media.discordapp.net/attachments/1499678798692745256/1499690357338804304/93c489086756a81c9c93677c25c4a205.png?ex=69f5b6fc&is=69f4657c&hm=18c6c2ec2fb5ea0415ae530928432b79fc94d81d97a20226558f245b95ad4ac9&=&format=webp&quality=lossless&width=461&height=461')"></div>
-        </div>
-        <div class="founder-name">dinero</div>
-        <div class="founder-id">@9dinero</div>
-        <div class="founder-id">1239256711240482907</div>
-      </div>
-    </div>
-  `;
-}
-
-window.addEventListener("DOMContentLoaded", () => {
-  loadServerStats();
-  loadFounder();
-});
-</script>
+    window.addEventListener('DOMContentLoaded', () => {
+      loadServerStats();
+      loadFounders();
+    });
+  </script>
 </body>
 </html>
