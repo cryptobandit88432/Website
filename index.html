@@ -5,25 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ace Shop | @9dinero </title>
 
-  <!-- Favicon -->
   <link rel="icon" type="image/png" href="TradeCore.png">
-
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
-
-  <!-- Icons -->
   <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
-
-  <!-- CSS -->
   <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 <div class="bg-glow"></div>
 
-<!-- NAV -->
 <nav class="navbar container">
   <a href="#" class="nav-logo">
     <img src="TradeCore.png" alt="Trade Core">
@@ -34,7 +25,6 @@
   </a>
 </nav>
 
-<!-- HERO -->
 <header class="hero container">
   <h1>
     The Premire Destination for <br>
@@ -44,7 +34,6 @@
     Established a premium marketplace bringing together collectors, investors, and traders worldwide.
   </p>
 
-  <!-- LIVE SERVER CARD -->
   <div id="server-card" class="server-status-card" style="margin-top:40px; display:none;">
     <img id="server-icon" src="TradeCore.png" alt="Server Icon">
     <div class="server-info">
@@ -64,7 +53,6 @@
   </div>
 </header>
 
-<!-- ABOUT -->
 <section id="about" class="container">
   <div class="grid-3">
     <div class="card">
@@ -85,7 +73,6 @@
   </div>
 </section>
 
-<!-- VERIFICATION -->
 <section id="verification" class="verification-section">
   <div class="container">
     <div class="section-title">
@@ -102,7 +89,6 @@
   </div>
 </section>
 
-<!-- TEAM -->
 <section id="team" class="container">
   <div class="section-title">
     <h2>Our <span class="gradient-text">Founder</span></h2>
@@ -112,29 +98,16 @@
   <div class="founders-grid" id="founders-container"></div>
 </section>
 
-<!-- FOOTER -->
-<footer
-  style="
-    text-align:center;
-    padding:40px 24px;
-    color:var(--text-secondary);
-    border-top:1px solid var(--card-border);
-    background:rgba(255,255,255,0.02);
-  "
->
+<footer style="text-align:center; padding:40px 24px; color:var(--text-secondary); border-top:1px solid var(--card-border); background:rgba(255,255,255,0.02);">
   <p style="font-size:0.9rem; line-height:1.6;">
     © 2026 Ace Shop All rights reserved.<br>
     Made with love by
-    <a href="https://discord.com/users/1239256711240482907"
-       target="_blank"
-       rel="noopener noreferrer"
-       style="color:inherit; text-decoration:underline;">
+    <a href="https://discord.com/users/1239256711240482907" target="_blank" rel="noopener noreferrer" style="color:inherit; text-decoration:underline;">
       dinero
     </a>.
   </p>
 </footer>
 
-<!-- SCRIPT -->
 <script>
 const SERVER_ID = "1469094312259358827";
 
@@ -142,45 +115,58 @@ function copyToClipboard(text) {
   navigator.clipboard.writeText(text).then(() => alert("Copied!"));
 }
 
-// LIVE SERVER DATA (Discord Widget)
 async function loadServerStats() {
   try {
-    const res = await fetch(
-      `https://discord.com/api/guilds/${SERVER_ID}/widget.json`
-    );
+    const res = await fetch(`https://discord.com/api/guilds/${SERVER_ID}/widget.json`);
     const data = await res.json();
 
     document.getElementById("server-card").style.display = "flex";
     document.getElementById("server-name").textContent = data.name;
-    document.getElementById("online-count").textContent =
-      data.presence_count.toLocaleString() + " Online";
-    document.getElementById("member-count").textContent =
-      data.members.length.toLocaleString() + " Members";
+    document.getElementById("online-count").textContent = data.presence_count.toLocaleString() + " Online";
+    document.getElementById("member-count").textContent = data.members.length.toLocaleString() + " Members";
     document.getElementById("server-invite").href = data.instant_invite;
 
     if (data.icon) {
-      document.getElementById("server-icon").src =
-        `https://cdn.discordapp.com/icons/${SERVER_ID}/${data.icon}.png`;
+      document.getElementById("server-icon").src = `https://cdn.discordapp.com/icons/${SERVER_ID}/${data.icon}.png`;
     }
   } catch (err) {
     console.error("Failed to load server stats", err);
   }
 }
 
-// FOUNDER
 function loadFounder() {
   const container = document.getElementById("founders-container");
   container.innerHTML = `
     <div class="founder-card">
       <div class="founder-content">
         <div class="avatar-wrapper">
-          <div class="founder-avatar"
-               style="background-image:url('https://media.discordapp.net/attachments/1499678798692745256/1499687965608382515/9f9b12b8599e776889b0923a85a49689.png?ex=69f5b4c1&is=69f46341&hm=ef7d5499bc39ff8c1522783b6b1c335270fe5d3c7cf50cdbc0ca3015c5cb9aba&=&format=webp&quality=lossless&width=230&height=230')">
-          </div>
+          <div class="founder-avatar" style="background-image:url('https://media.discordapp.net/attachments/1499678798692745256/1499687965608382515/9f9b12b8599e776889b0923a85a49689.png')"></div>
         </div>
         <div class="founder-name">aceofsix</div>
         <div class="founder-id">@aceofsixisback</div>
         <div class="founder-id">1172910542902538262</div>
+      </div>
+    </div>
+
+    <div class="founder-card">
+      <div class="founder-content">
+        <div class="avatar-wrapper">
+          <div class="founder-avatar" style="background-image:url('https://media.discordapp.net/attachments/1499678798692745256/1499689840013348985/e9a4e380e63cef727bb89d28dd94d7a6.png?ex=69f5b680&is=69f46500&hm=c8f1058a8149ec2d0ae11fa568c6fcfcfaba381852dbe6128c149f632d0122df&=&format=webp&quality=lossless&width=461&height=461')"></div>
+        </div>
+        <div class="founder-name">Toxic</div>
+        <div class="founder-id">@toxicfuckingc</div>
+        <div class="founder-id">1425483231763107873</div>
+      </div>
+    </div>
+
+    <div class="founder-card">
+      <div class="founder-content">
+        <div class="avatar-wrapper">
+          <div class="founder-avatar" style="background-image:url('https://via.placeholder.com/230')"></div>
+        </div>
+        <div class="founder-name">dinero</div>
+        <div class="founder-id">@9dinero</div>
+        <div class="founder-id">1239256711240482907</div>
       </div>
     </div>
   `;
